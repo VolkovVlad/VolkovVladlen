@@ -1,0 +1,142 @@
+.skills{
+  border: 1px solid @black;
+  border-left: none;
+  border-right: none;
+  background: @white;
+  padding-bottom: 30px;
+
+  .container{
+    /* background: rgba(250,10,10,0.3); /* DEL!  */
+    padding-top: 1px;
+  }
+
+  &__title{
+    text-align: center;
+    font-family: @font;
+    font-weight: normal;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  &__list{
+    .list-style-none();
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    box-shadow: 0 0 10px 2px black;
+  }
+
+  &__list-item{
+    position: relative;
+    flex-grow: 1;
+    width: 17%;
+    min-height: 300px;
+    margin: 20px;
+    padding: 20px 5%;
+    border: 7px solid gray;
+    text-align: center;
+    background: linear-gradient( to bottom, rgba(0,0,0,0.1) 45%, transparent 46%);
+    
+    cursor: pointer;
+
+    .skills__logo{
+      margin-bottom: 40px;
+    }
+
+    &--html{
+      border: 7px solid @html;
+    }
+
+    &--css{
+      border: 7px solid @css;
+    }
+
+    &--bootstrap{
+      border: 7px solid @bootstrap;
+    }
+
+    &--js{
+      border: 7px solid @js;
+    }
+
+    &--jq{
+      border: 7px solid @black;
+    }
+
+    &--ajax{
+      border: 7px solid @red;
+    }
+
+    &--php{
+      border: 7px solid @php;
+    }
+
+    &--mysql{
+      border: 7px solid @mysql;
+    }
+
+    &--wp{
+      border: 7px solid @black;
+    }
+
+    &--md{
+      background: linear-gradient( to bottom, rgba(0,0,0,0.1) 55%, transparent 56%);
+    }
+
+
+
+    &--lg{
+      background: linear-gradient( to bottom, rgba(0,0,0,0.1) 47%, transparent 48%);
+      width: 100%;
+    }
+  }
+
+  &__logo{
+    position: relative;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &__item-title{
+    margin: 20px auto;
+    max-width: 160px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid @red;
+
+    &::after{
+      content: "";
+      display: block;
+      position: relative;
+      width: 80%;
+      height: 3px;
+      background: @red;
+      margin: 0 auto;
+      top: 15px;
+    }
+  }
+
+  &__description{
+    font-size: 20px;
+  }
+}
+
+.svg-change--2{
+  animation: update-1  0.4s infinite linear alternate-reverse;
+}
+
+.svg-change--1{
+  animation: update-2  0.4s infinite linear alternate-reverse;
+}
+
+@keyframes update-1{
+  to{
+    fill: rgb(52,62,252);
+  }
+}
+
+@keyframes update-2{
+  to{
+    fill: rgb(0,0,0);
+  }
+}

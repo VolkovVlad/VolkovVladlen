@@ -6,6 +6,7 @@ $(document).ready(function(){
   
   // var to intro-block
   var $intro = $(".intro .container");
+  var $skills =  $(".skills--part-1");
   
   
   
@@ -18,6 +19,10 @@ $(document).ready(function(){
   
   //function to intro-fade-in
   $intro.fadeIn(1000);
+  
+  $intro.click(function(e){
+    $("body").animate({ scrollTop: ($skills.offset().top +5) }, 300)
+  });
   
   
   
