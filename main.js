@@ -91,6 +91,10 @@ $(document).ready(function(){
   //function scrolling
   $window.scroll(function(e){
   
+  if (!$visited){
+      $visited = localStorage.getItem("visited");
+  }
+  
   $scrollHeight = $window.scrollTop();
   
     if(!$visited){
@@ -105,6 +109,7 @@ $(document).ready(function(){
       $body.addClass("body-blue");
       $overFlow.fadeIn(700);
       $(".skills__list-item--html").addClass("skills__list-item--firstSide");
+      localStorage.setItem("visited", true);
       
     };
   };
