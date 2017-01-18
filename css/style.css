@@ -362,11 +362,45 @@
   }
 }
 .skills {
+  position: relative;
   border: 1px solid #000000;
   border-left: none;
   border-right: none;
   background: #ffffff;
   padding-bottom: 30px;
+}
+.skills--part-1 {
+  margin-bottom: 300px;
+  box-shadow: 0 2px 10px 0 black;
+}
+.skills--part-1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  bottom: -300px;
+  left: 0;
+  background: url("../image/glass--xs.png") no-repeat 50% 0%;
+  background-size: 100% auto;
+}
+@media (max-width: 730px) {
+  .skills--part-1::after {
+    background: url("../image/glass--xs.png") no-repeat 50% 0%;
+    background-size: cover;
+  }
+}
+@media (max-width: 600px) {
+  .skills--part-1 {
+    margin-bottom: 200px;
+  }
+  .skills--part-1::after {
+    height: 200px;
+    bottom: -200px;
+  }
+}
+.skills--part-2 {
+  box-shadow: 0 -2px 10px 0 black;
 }
 .skills .container {
   /* background: rgba(250,10,10,0.3); /* DEL!  */
@@ -425,7 +459,7 @@
   z-index: 1001;
 }
 .skills__list-item--firstSide::before {
-  content: 'Нажмите, чтобы перевернуть';
+  content: "Нажмите, чтобы перевернуть";
   position: absolute;
   display: block;
   width: 340px;
@@ -439,12 +473,12 @@
   color: #ffffff;
 }
 .skills__list-item--firstSide::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 300px;
   height: 80px;
-  background: url('../image/arrow--1.svg') no-repeat 0 50%;
+  background: url("../image/arrow--1.svg") no-repeat 0 50%;
   background-size: contain;
   top: 40%;
   right: -330px;
@@ -801,6 +835,123 @@
 @keyframes roll {
   to {
     transform: rotate(-360deg);
+  }
+}
+.paralax {
+  display: none;
+  position: fixed;
+  background: url("../image/dolphin.png") 94% 36% no-repeat, url("../image/turtle.png") 10% 0% no-repeat, #297fd6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  font-size: 120px;
+  color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.paralax::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 300px;
+  max-height: 224px;
+  width: 100% ;
+  left: 0;
+  bottom: -5px;
+  background: url("../image/paralax-bg.png") no-repeat 50% 100%;
+  background-size: 100% auto;
+}
+@media (min-width: 1225px) {
+  .paralax::after {
+    background: url("../image/paralax-bg.png") no-repeat 50% 100%;
+    background-size: 1220px 224px;
+  }
+}
+@media (max-width: 860px) {
+  .paralax::after {
+    background: url("../image/paralax-bg.png") no-repeat 25% 100%;
+    background-size: 1220px 224px;
+  }
+}
+@media (max-width: 600px) {
+  .paralax {
+    background: url("../image/dolphin--xs.png") 94% 46% no-repeat, url("../image/turtle--xs.png") 10% 15% no-repeat, #297fd6;
+  }
+  .paralax::after {
+    background: url("../image/paralax-bg.png") no-repeat 15% 100%;
+    background-size: 1220px 224px;
+  }
+}
+@media (max-width: 530px) {
+  .paralax::after {
+    background: url("../image/paralax-bg--xs.svg") -83% -303.5%;
+    background-size: 400%;
+  }
+}
+@media (max-width: 490px) {
+  .paralax::after {
+    background: url("../image/paralax-bg--xs.svg") -83% -309%;
+    background-size: 400%;
+  }
+}
+@media (max-width: 440px) {
+  .paralax::after {
+    background: url("../image/paralax-bg--xs.svg") -83% -316%;
+    background-size: 400%;
+  }
+}
+@media (max-width: 400px) {
+  .paralax::after {
+    background: url("../image/paralax-bg--xs.svg") -83% -323%;
+    background-size: 400%;
+  }
+}
+@media (max-width: 350px) {
+  .paralax::after {
+    background: url("../image/paralax-bg--xs.svg") -83% -330%;
+    background-size: 400%;
+  }
+}
+@media (max-width: 300px) {
+  .paralax::after {
+    background: none;
+  }
+}
+.paralax__title {
+  font-size: 120px;
+  color: #ffffff;
+}
+@media (max-width: 765px) {
+  .paralax__title {
+    font-size: 90px;
+  }
+}
+@media (max-width: 600px) {
+  .paralax__title {
+    font-size: 55px;
+  }
+}
+@media (max-width: 430px) {
+  .paralax__title {
+    font-size: 40px;
+  }
+}
+.paralax .fish {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background: url("../image/fish.svg") no-repeat 50% 50%;
+  background-size: contain;
+  top: 60%;
+  left: -100px;
+  animation: swime 10s linear infinite;
+}
+@keyframes swime {
+  to {
+    left: 100%;
   }
 }
 .btn {
