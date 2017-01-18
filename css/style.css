@@ -401,6 +401,7 @@
 }
 .skills--part-2 {
   box-shadow: 0 -2px 10px 0 black;
+  padding-top: 30px;
 }
 .skills .container {
   /* background: rgba(250,10,10,0.3); /* DEL!  */
@@ -455,10 +456,10 @@
     width: 100%;
   }
 }
-.skills__list-item--firstSide {
+.skills__list-item--firstside {
   z-index: 1001;
 }
-.skills__list-item--firstSide::before {
+.skills__list-item--firstside::before {
   content: "Нажмите, чтобы перевернуть";
   position: absolute;
   display: block;
@@ -472,7 +473,7 @@
   font-family: "Open Sans", "Arial", sans-serif;
   color: #ffffff;
 }
-.skills__list-item--firstSide::after {
+.skills__list-item--firstside::after {
   content: "";
   position: absolute;
   display: block;
@@ -485,7 +486,7 @@
   z-index: 1002;
 }
 @media (max-width: 820px) {
-  .skills__list-item--firstSide::before {
+  .skills__list-item--firstside::before {
     font-size: 24px;
     right: -340px;
     top: 40%;
@@ -493,36 +494,41 @@
   }
 }
 @media (max-width: 690px) {
-  .skills__list-item--firstSide::before {
+  .skills__list-item--firstside::before {
     font-size: 20px;
     right: -270px;
   }
-  .skills__list-item--firstSide::after {
+  .skills__list-item--firstside::after {
     right: -310px;
     height: 50px;
   }
 }
 @media (max-width: 585px) {
-  .skills__list-item--firstSide::before {
+  .skills__list-item--firstside::before {
     width: 90%;
     left: 5%;
     top: -50px;
     font-size: 28px;
   }
-  .skills__list-item--firstSide::after {
+  .skills__list-item--firstside::after {
     display: none;
   }
 }
 @media (max-width: 513px) {
-  .skills__list-item--firstSide::before {
+  .skills__list-item--firstside::before {
     top: -80px;
   }
 }
-.skills__list-item--firstSide .skills__section-skill {
+.skills__list-item--firstside .skills__section-skill {
   box-shadow: 0 0 25px 2px #ffffff !important;
 }
-.skills__list-item--firstSide .skills__section-skill:hover {
+.skills__list-item--firstside .skills__section-skill:hover {
   box-shadow: 0 20px 20px 2px rgba(255, 255, 255, 0.5) !important;
+}
+@media (max-width: 1120px) {
+  .skills__list-item--photoshop {
+    width: 70%;
+  }
 }
 .skills__list-item--lg {
   position: relative;
@@ -618,6 +624,29 @@
 }
 .skills__section-skill--wp {
   border: 7px solid #000000;
+}
+.skills__section-skill--svg {
+  border: 7px solid #000000;
+  background: linear-gradient(to bottom, #ffb13b 45%, #ffffff 46.5%);
+}
+.skills__section-skill--sprite {
+  border: 7px solid #1572b6;
+  background: linear-gradient(to bottom, #75bbef 45%, #ffffff 46.5%);
+}
+.skills__section-skill--photoshop {
+  border: 7px solid #090052;
+  background: linear-gradient(to bottom, #090052 45%, #ffffff 46.5%);
+}
+.skills__section-skill--less {
+  border: 7px solid #2a4f84;
+}
+.skills__section-skill--bem {
+  border: 7px solid #4e9a06;
+  background: linear-gradient(to bottom, #9af841 45%, #ffffff 46.5%);
+}
+.skills__section-skill--git {
+  border: 7px solid #f03c2e;
+  background: linear-gradient(to bottom, #feeeec 45%, #ffffff 46.5%);
 }
 .skills__section-skill .skills__logo {
   margin-bottom: 40px;
@@ -946,7 +975,7 @@
   background: url("../image/fish.svg") no-repeat 50% 50%;
   background-size: contain;
   top: 60%;
-  left: -100px;
+  left: -200px;
   animation: swime 10s linear infinite;
 }
 @keyframes swime {

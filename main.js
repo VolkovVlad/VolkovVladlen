@@ -51,7 +51,7 @@ $(document).ready(function(){
     $(this).click(function(){
       $card.toggleClass("card  card--reverse");
       $body.removeClass("body-blue");
-      $(".skills__list-item--html").removeClass("skills__list-item--firstSide");
+      $(".skills__list-item--html").removeClass("skills__list-item--firstside");
     })
   });
   
@@ -108,7 +108,7 @@ $(document).ready(function(){
       $("body, html").animate({ scrollTop: ($skills.offset().top +5) }, 300)
       $body.addClass("body-blue");
       $overFlow.fadeIn(700);
-      $(".skills__list-item--html").addClass("skills__list-item--firstSide");
+      $(".skills__list-item--html").addClass("skills__list-item--firstside");
       localStorage.setItem("visited", true);
       
     };
