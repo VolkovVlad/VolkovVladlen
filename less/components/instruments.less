@@ -1,43 +1,48 @@
 .instruments{
-  background: lighten(@blue,30%);
+  background: lighten(@blue,50%);
   padding-top: 1px;
   padding-bottom: 1px;
-  
+
   &__title{
     .title-style();
   }
-  
+
   &__list{
     .list-style-none();
     display: flex;
-    margin-bottom:30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    margin-bottom: 30px;
   }
-  
+
   &__list-item{
     padding: 20px 0;
     width: 20%;
     text-align: center;
+
+    @media (max-width: 800px){
+      width: 33.3%;
+    }
+    
+    @media (max-width: 470px) {
+    	width: 50%;
+    }
   }
-  
+
   &__logo{
     -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
-    
+       -moz-transition: 0.4s;
+        -ms-transition: 0.4s;
+         -o-transition: 0.4s;
+            transition: 0.4s;
+
     &--grunt{
       transform: translateY(10px) scale(1.1);
     }
-    
-    
   }
-  
+
   &__description{
     font-weight: bold;
     font-size: 20px;
   }
-  
-  
-  
 }

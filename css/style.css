@@ -984,7 +984,7 @@
   }
 }
 .instruments {
-  background: #75bbef;
+  background: #d0e8fa;
   padding-top: 1px;
   padding-bottom: 1px;
 }
@@ -1000,12 +1000,24 @@
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 30px;
 }
 .instruments__list-item {
   padding: 20px 0;
   width: 20%;
   text-align: center;
+}
+@media (max-width: 800px) {
+  .instruments__list-item {
+    width: 33.3%;
+  }
+}
+@media (max-width: 470px) {
+  .instruments__list-item {
+    width: 50%;
+  }
 }
 .instruments__logo {
   -webkit-transition: 0.4s;
