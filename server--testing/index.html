@@ -60,6 +60,7 @@
       </div>  
     </div>
     <main>
+     
       <section class="skills  skills--part-1">
         <div class="container">
          <h2 class="skills__title">Мои ключевые навыки:</h2>
@@ -643,19 +644,15 @@
           </ul>
         </div>
       </section>
-      
-      
-      
-      <div class="paralax">
+
+      <div class="paralax" draggable="false">
         <b class="paralax__title">PARALAX</b>
         <div class="fish"></div>
       </div>
       
       <section class="skills  skills--part-2">
         <div class="container">
-          <ul class="skills__list">
-            <!-- <!-- <!-- <!-- <!--  --> 
-            <!-- <!-- <!-- <!-- <!--  --> 
+          <ul class="skills__list"> 
             <li class="skills__list-item  skills__list-item--svg">
               <div class="card">
                 <section class="skills__section-skill  skills__section-skill--svg">
@@ -744,7 +741,7 @@
               <div class="card">
                 <section class="skills__section-skill  skills__section-skill--less">
                   <div class="skills__logo">
-                    <img src="image/less_logo.svg" width="auto" height="100" alt="LESS" class="skills__logo-image">
+                    <img src="image/less_logo.svg" width="auto" height="90" alt="LESS" class="skills__logo-image">
                   </div>
                   <h2 class="skills__item-title">LESS/SASS</h2>
                   <p class="skills__description">
@@ -823,86 +820,201 @@
                   </div>
               </div>
             </li>
-            <!-- <li class="skills__list-item">
-              <div class="skills__logo">
-                <img src="#" width="" height="" alt="SVG and <picture>" class="skills__logo-image">
-              </div>
-              <p class="skills__description"></p>
-            </li>
-            <li class="skills__list-item">
-              <div class="skills__logo">
-                <img src="#" width="" height="" alt="Sprite" class="skills__logo-image">
-              </div>
-              <p class="skills__description"></p>
-            </li>
-            <li class="skills__list-item">
-              <div class="skills__logo">
-                <img src="#" width="" height="" alt="Photoshop" class="skills__logo-image">
-              </div>
-              <p class="skills__description"></p>
-            </li>
-            <li class="skills__list-item">
-              <div class="skills__logo">
-                <img src="#" width="" height="" alt="LESS/SASS" class="skills__logo-image">
-              </div>
-              <p class="skills__description"></p>
-            </li>
-            <li class="skills__list-item">
-              <div class="skills__logo">
-                <img src="#" width="" height="" alt="БЭМ" class="skills__logo-image">
-              </div>
-              <p class="skills__description"></p>
-            </li>
-            <li class="skills__list-item">
-              <div class="skills__logo">
-                <img src="#" width="" height="" alt="Git" class="skills__logo-image">
-              </div>
-              <p class="skills__description"></p>
-            </li> -->
           </ul>
         </div>
       </section>
+      
       <section class="instruments">
         <div class="container">
           <h2 class="instruments__title">Мои инструменты:</h2>
           <ul class="instruments__list">
             <li class="instruments__list-item">
               <div class="instruments__logo">
-                <img src="#"  width="" height="" alt="Window 7" class="instruments__logo-image">
+                <picture>
+                  <source srcset="image/windows-7_logo-@2.png 2x, image/windows-7_logo-@3.png 3x">
+                  <img src="image/windows-7_logo.png"  width="100" height="auto" alt="Window 7" class="instruments__logo-image">
+                </picture>
               </div>
-              <p class="instruments__description"></p>
+              <p class="instruments__description">Windows 7</p>
             </li>
             <li class="instruments__list-item">
               <div class="instruments__logo">
-                <img src="#"  width="" height="" alt="OpenServer" class="instruments__logo-image">
+                <img src="image/open-server_logo.svg"  width="100"  alt="OpenServer" class="instruments__logo-image">
               </div>
-              <p class="instruments__description"></p>
+              <p class="instruments__description">OpenServer</p>
             </li>
             <li class="instruments__list-item">
               <div class="instruments__logo">
-                <img src="#"  width="" height="" alt="Nodepad++" class="instruments__logo-image">
+                <picture>
+                  <source srcset="image/notepad_logo-@2.png 2x">
+                  <img src="image/notepad_logo.png"  width="100" height="auto" alt="Nodepad++" class="instruments__logo-image">
+                </picture>
               </div>
-              <p class="instruments__description"></p>
+              <p class="instruments__description">Nodepad++</p>
             </li>
             <li class="instruments__list-item">
               <div class="instruments__logo">
-                <img src="#"  width="" height="" alt="Emmet" class="instruments__logo-image">
+                <img src="image/emmet_logo.svg"  width="100" alt="Emmet" class="instruments__logo-image">
               </div>
-              <p class="instruments__description"></p>
+              <p class="instruments__description">Emmet</p>
             </li>
             <li class="instruments__list-item">
-              <div class="instruments__logo">
-                <img src="#"  width="" height="" alt="Grunt" class="instruments__logo-image">
+              <div class="instruments__logo--grunt">
+                <img src="image/grunt_logo.svg"  width="100" alt="Grunt" class="instruments__logo-image">
               </div>
-              <p class="instruments__description"></p>
+              <p class="instruments__description">Grunt</p>
             </li>
           </ul>
         </div>
       </section>
       
-      <section class="experience">
-      <h2 class="experience__title"></h2>
-      <p class="experience__text"></p>
+      <section class="projects">
+        <div class="container">
+          <h2 class="projects__title">Мои проекты:</h2>
+          <article class="project  project--pink">
+            <div class="project__logo">
+              <picture>
+                <source srcset="image/pink-@2.png 2x, image/pink-@3.png 3x">
+                <img src="image/pink.png" width="500" height="auto" alt="Pink,Inc. in laptop" class="project__logo-image">
+              </picture>
+            </div>
+            <div class="project__content">
+              <h2 class="project__title">Pink</h2>
+              <p class="project__description">
+                Landing page для продвижения 
+                мобильного приложения PINK. Отлично выглядит
+                на всех видах устройств, включая смартфоны,
+                таблетов и ПК.
+              </p>
+              <section class="project__technologies">
+                <span class="bold-block">HTML5</span>
+                <span class="bold-block">CSS3</span>
+                <span class="bold-block">JavaScript</span>
+                <span class="bold-block">Grunt</span>
+                <span class="bold-block">LESS</span>
+                <span class="bold-block">Google maps</span>
+                <span class="bold-block">Responsive layout</span>
+              </section>
+              <a href="#" class="btn  btn--projects">Посмотреть</a>
+            </div>
+          </article>
+          <article class="project  project--sedona">
+            <div class="project__logo">
+              <picture>
+                <source srcset="image/sedona-@2.png 2x, image/sedona-@3.png 3x">
+                <img src="image/sedona.png" width="500" height="auto" alt="Sedona,Inc. in laptop" class="project__logo-image">
+              </picture>
+            </div>
+            <div class="project__content">
+              <h2 class="project__title">Sedona</h2>
+              <p class="project__description">
+                Адаптивная вёрстка сайта,
+                описывающего все прелести небольшого городка в Аризоне, с возможностью выбрать и забранировать гостиницу
+                для своей поездки.
+                Отлично смотрится на мобильных 
+                устройствах, планшетах и десктопах.
+                
+                
+              </p>
+              <section class="project__technologies">
+                <span class="bold-block">HTML5</span>
+                <span class="bold-block">CSS3</span>
+                <span class="bold-block">JavaScript</span>
+                <span class="bold-block">jQuery</span>
+                <span class="bold-block">PHP</span>
+                <span class="bold-block">Grunt</span>
+                <span class="bold-block">LESS</span>
+                <span class="bold-block">Google maps</span>
+                <span class="bold-block">Responsive layout</span>
+              </section>
+              <a href="#" class="btn  btn--projects">Посмотреть</a>
+            </div>
+          </article>
+          <article class="project  project--accountant">
+            <div class="project__logo">
+              <picture>
+                <source srcset="image/accountant-@2.png 2x, image/accountant-@3.png 3x">
+                <img src="image/accountant.png" width="500" height="300" alt="Наш бухглатер, Inc. in laptop" class="project__logo-image">
+              </picture>
+            </div>
+            <div class="project__content">
+              <h2 class="project__title">"Наш бухгалтер"</h2>
+              <p class="project__description">
+                Сайт для небольшой фирмы по предоставлению
+                бухгалтерских услуг в городе Туле.
+                Подойдет для просмотра с любых девайсов,
+                кроссбраузерно и адаптивно.                
+              </p>
+              <section class="project__technologies">
+                <span class="bold-block">HTML5</span>
+                <span class="bold-block">CSS3</span>
+                <span class="bold-block">JavaScript</span>
+                <span class="bold-block">jQuery</span>
+                <span class="bold-block">Grunt</span>
+                <span class="bold-block">LESS</span>
+                <span class="bold-block">Responsive layout</span>
+              </section>
+              <a href="#" class="btn  btn--projects">Посмотреть</a>
+            </div>
+          </article>
+          <article class="project  project--borodinski">
+            <div class="project__logo">
+              <picture>
+                <source srcset="image/borodinski-@2.png 2x, image/borodinski-@3.png 3x">
+                <img src="image/borodinski.png" width="500" height="300" alt="Borodinski, Inc. in laptop" class="project__logo-image">
+              </picture>
+            </div>
+            <div class="project__content">
+              <h2 class="project__title">"Borodinski"</h2>
+              <p class="project__description">
+                Главная страница барбершоп Borodinski,
+                с всплывающими окнами, подсказками 
+                и мини-галереей. Брутальный стиль в 
+                духе главных принципов салона: 
+                "Быстро", "Круто", "Дорого".
+              </p>
+              <section class="project__technologies">
+                <span class="bold-block">HTML5</span>
+                <span class="bold-block">CSS3</span>
+                <span class="bold-block">JavaScript</span>
+                <span class="bold-block">PHP</span>
+                <span class="bold-block">MySQL</span>
+                <span class="bold-block">Grunt</span>
+                <span class="bold-block">LESS</span>
+                <span class="bold-block">Sprite</span>                
+              </section>
+              <a href="#" class="btn  btn--projects">Посмотреть</a>
+            </div>
+          </article>
+          <article class="project  project--nerd">
+            <div class="project__logo">
+              <picture>
+                <source srcset="image/nerd-@2.png 2x, image/nerd-@3.png 3x">
+                <img src="image/nerd.png" width="500" height="300" alt="Nerds, Inc. in laptop" class="project__logo-image">
+              </picture>
+            </div>
+            <div class="project__content">
+              <h2 class="project__title">Nerds</h2>
+              <p class="project__description">
+                Учебный макет для web-студии Nerds,
+                с использованием крутых приемов CSS.
+                
+                
+              </p>
+              <section class="project__technologies">
+                <span class="bold-block">HTML5</span>
+                <span class="bold-block">CSS3</span>
+                <span class="bold-block">JavaScript</span>
+                <span class="bold-block">PHP</span>
+                <span class="bold-block">MySQL</span>
+                <span class="bold-block">Grunt</span>
+                <span class="bold-block">LESS</span>
+                <span class="bold-block">Sprite</span>
+              </section>
+              <a href="#" class="btn  btn--projects">Посмотреть</a>
+            </div>
+          </article>
+        </div>
       </section>
       
     </main>
