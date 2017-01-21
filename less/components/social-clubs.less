@@ -1,0 +1,59 @@
+.social-clubs{
+  text-align: center;
+  padding-top: 20px;
+
+  &__title{
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 15px;
+    font-family: @font;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+    color: @white;
+  }
+
+  &__list{
+    .list-style-none();
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+  }
+
+  &__social-btn{
+    display: block;
+    height: 42px;
+    width: 42px;
+    font-size: 0;
+    background: @black;
+    -webkit-transition: 0.7s;
+       -moz-transition: 0.7s;
+        -ms-transition: 0.7s;
+         -o-transition: 0.7s;
+            transition: 0.7s;
+
+    &--vk{
+      background: @black url("../image/sprite.png") no-repeat 8px -111px;
+
+      &:hover{
+        background: @white url("../image/sprite.png") no-repeat 8px -346px;
+      }
+    }
+
+    &--fb{
+      background: @black url("../image/sprite.png") no-repeat 15px 10px;
+
+      &:hover{
+        background: @white url("../image/sprite.png") no-repeat 15px -225px;
+      }
+    }
+
+    &--ig{
+      background: @black url("../image/sprite.png") no-repeat 10px -52px;
+
+      &:hover{
+        background: @white url("../image/sprite.png") no-repeat 10px -287px;
+      }
+    }
+  }
+}

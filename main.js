@@ -27,6 +27,78 @@ $(document).ready(function(){
   var $showed = false;
   var $overFlow = $(".overflow-blue");
   
+  //var to WOW
+  var $project_content = $(".project__content");
+  var $project_logo = $(".project__logo");
+  
+  //var to form
+  var $form = $(".form");
+  var $form_btn = $("#submit");
+  var $name = $("#name");
+  var $mail = $("#mail");
+  var $message = $("#message");
+  
+  
+  
+  //function to form
+  
+  $(".loading--f").hide();
+  
+  $form.submit(function(e){
+    var $moment_of_submit = new Date();
+  
+    e.preventDefault();
+    var $data = $(this).serialize();
+    
+    $name.addClass("zoomOut");
+    $mail.addClass("zoomOut--delay400");
+    $message.addClass("zoomOut--delay800");
+    $form_btn.addClass("zoomOut--delay1200");
+    
+    $(".loading--f").delay(2000).fadeIn(200);
+    
+    
+    
+          
+    
+    
+    $.ajax({
+      url: 'action.php',
+      type: 'POST',
+      data: $data,
+      success: 
+        function(responce){
+        
+        
+        $(".loading--f").css({            
+              background: 'none',
+              transform: 'translateY(1500px)',
+              'animation-iteration-count': '1'
+            });
+        
+        $("#indicator").css({opacity:'0'});
+        $("#indicator").html('Ваше предложение успешно отправлено!').css({color:'#04c880'});
+        
+          var $moment_of_responce = new Date();
+          var $diff = $moment_of_responce - $moment_of_submit;
+          
+          if($diff <= 2200){
+            
+            $form.delay(2200-$diff).fadeOut(1);
+            $("#indicator").delay(2200-$diff).animate({opacity:1},400);                 
+            $(".contacts").delay(2200-$diff).slideDown(400);                 
+          } else {
+            $form.fadeOut(1);
+            $("#indicator").animate({opacity:1},400);
+            $(".contacts").slideDown(400);             
+          }
+        }
+      //,
+      // error: alert('not ok')   
+    })
+
+  })
+  
   
   
   // function to OPEN/CLOSE menu
@@ -113,5 +185,15 @@ $(document).ready(function(){
       
     };
   };
+  
+  //function to WOW
+  if($window.width() <= 1100){
+    $project_content.attr('data-wow-delay', '0.1s')
+  } else {
+    $project_logo.removeClass("bounceInRight");
+    $project_logo.addClass("bounceInLeft");
+  }
+  
+  
   
 });

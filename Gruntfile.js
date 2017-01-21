@@ -37,7 +37,8 @@ module.exports = function(grunt) {
         },
         files: {
           "css/style.min.css": ["css/style.css"],
-          "css/font-style.min.css": ["css/font-style.css"]
+          "css/font-style.min.css": ["css/font-style.css"],
+          "css/animate.min.css": ["css/animate.css"]
         }
       }
     },

@@ -1,3 +1,5 @@
+
+
 .skills{
   position: relative;
   border: 1px solid @black;
@@ -18,13 +20,13 @@
       height: 300px;
       bottom: -300px;
       left: 0;
-      background: url("../image/glass--xs.png") no-repeat 50% 0%;
+      background: url("../image/glass.png") no-repeat 50% 0%;
       background-size: 100% auto;
     }
 
     @media (max-width: 730px){
       &::after{
-        background: url("../image/glass--xs.png") no-repeat 50% 0%;
+        background: url("../image/glass.png") no-repeat 50% 0%;
         background-size: cover;
       }
     }
@@ -48,7 +50,6 @@
 
 
   .container{
-    /* background: rgba(250,10,10,0.3); /* DEL!  */
     padding-top: 1px;
   }
 
@@ -65,7 +66,6 @@
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 15px;
-    /*box-shadow: 0 0 10px 2px black;*/
   }
 
   &__list-item{
@@ -77,7 +77,6 @@
     text-align: center;
     z-index: 20;
     transform-style: preserve-3d;
-    backface-visibility: hidden;
     perspective: 2000px;
     -webkit-transition: 0.4s;
        -moz-transition: 0.4s;
@@ -234,7 +233,6 @@
             transition: 0.7s;
     transform-style: preserve-3d;
     backface-visibility: hidden;
-    perspective: 500px;
   }
 
 
@@ -262,9 +260,9 @@
         -ms-transition: 0.4s;
          -o-transition: 0.4s;
             transition: 0.4s;
-    transform-style: preserve-3d;
+    /*transform-style: preserve-3d;*/
     backface-visibility: hidden;
-    perspective: 500px;
+    /*perspective: 2000px;*/
 
     &--html{
       border: 7px solid @html;
@@ -363,8 +361,8 @@
          -o-transition: 0.7s;
             transition: 0.7s;
     transform-style: preserve-3d;
-    backface-visibility: hidden;
-    perspective: 500px;
+    /*backface-visibility: hidden;
+    /*perspective: 2000px;*/
     transform: rotateX(180deg);
   }
 
@@ -380,7 +378,8 @@
     color: lighten(@green,10%);
     backface-visibility: hidden;
     transform: rotateX(180deg);
-    transform-style: preserve-3d;
+
+    /*transform-style: preserve-3d;*/
     -webkit-transition: 0.4s;
        -moz-transition: 0.4s;
         -ms-transition: 0.4s;

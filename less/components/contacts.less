@@ -1,0 +1,80 @@
+.contacts{
+  display: none;
+  color: @white;
+  font-size: 20px;
+  background: @blue;
+  padding: 30px;
+  border-radius: 15px;
+  border: 7px groove darken(@blue,30%);
+  
+  &__title{
+    .title-style();
+    font-size: 24px;
+  }
+  
+  &__list{
+    .list-style-none();
+    display: flex;
+      justify-content: space-around;
+      
+      @media (max-width: 640px) {
+      	flex-wrap:wrap;
+      }
+    
+  }
+  
+  &__list-item{
+    width: 30%;
+    text-align: center;
+    border: 1px dashed white;
+    background: white;
+    color: @blue;
+    padding-top: 20px;
+    padding-bottom:20px ;
+    border: 2px solid darken(@blue,30%);
+    font-size: 16px;
+    
+    
+    &::before{
+      content: '';
+      display: block;
+      height: 150px;
+      margin-bottom: 10px;
+      
+    }
+    
+    @media (max-width: 640px) {
+    	width: 100%;
+      
+      &::before{
+        display: none;
+      }
+    }
+    
+    &--gmail{
+      &::before{
+        background: url('../image/spritesheet.png') no-repeat 50% 0%;        
+      } 
+    }
+    
+    &--skype{
+      &::before{
+        background: url('../image/spritesheet.png') no-repeat 50% 50%;        
+      } 
+      
+      @media (max-width: 640px) {
+      	display: none;
+      }
+    }
+    
+    &--viber{
+      &::before{
+        background: url('../image/spritesheet.png') no-repeat 50% 100%;        
+      } 
+      @media (max-width: 640px) {
+      	display: none;
+      }
+    }
+  }
+  
+}

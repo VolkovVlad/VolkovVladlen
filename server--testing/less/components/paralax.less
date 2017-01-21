@@ -15,6 +15,12 @@
   height: 100vh;
   z-index: -1;
 
+  @media (max-width: 695px){
+    background: url("../image/dolphin.png") 97% 36% no-repeat,
+    url("../image/turtle.png") 10% -30% no-repeat,
+    #297fd6;
+  }
+
   &::after{
     content: "";
     display: block;
@@ -98,7 +104,7 @@
     font-size: 120px;
     color: #ffffff;
 
-    @media (max-width: 765px){
+    @media (max-width: 965px){
       font-size: 90px;
     }
 
